@@ -42,9 +42,11 @@ public class Player {
 	public int getStrength() {
 		return strength;
 	}
+
 	public void setHealth(int health) {
 		this.health = health;
 	}
+
 	public int getHealth() {
 		return health;
 	}
@@ -65,6 +67,7 @@ public class Player {
 	public String toString() {
 		return "Player [id=" + id + ", health=" + health + ", strength=" + strength + ", attack=" + attack + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(attack, health, strength);

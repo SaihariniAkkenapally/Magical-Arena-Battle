@@ -44,19 +44,19 @@ public class Game {
 		return playNextTurn();
 	}
 
-	private Player getPlayerWithMinimumHealth(List<Player> players) {
-		Player playerWithMinimumHealth = null;
-		int minHealth = Integer.MAX_VALUE;
-		for (Player player : players) {
-			if (player.getHealth() <= minHealth) {
-				playerWithMinimumHealth = player;
-				minHealth = player.getHealth();
+	Player getPlayerWithMinimumHealth(List<Player> players) {
+		Player playerWithMinimumHealth = players.get(0);
+		int minHealth = playerWithMinimumHealth.getHealth();
+		for (int index = 1; index < players.size(); index++) {
+			if (players.get(index).getHealth() <= minHealth) {
+				playerWithMinimumHealth = players.get(index);
+				minHealth = players.get(index).getHealth();
 			}
 		}
 		return playerWithMinimumHealth;
 	}
 
-	private List<Player> getOtherPlayers(Player attacker, List<Player> players) {
+	List<Player> getOtherPlayers(Player attacker, List<Player> players) {
 		List<Player> otherPlayers = new ArrayList<>();
 		for (Player player : players) {
 			if (!player.equals(attacker)) {
@@ -95,7 +95,7 @@ public class Game {
 		}
 	}
 
-	private void insertAttackerAtTheEnd(Player attacker) {
+	void insertAttackerAtTheEnd(Player attacker) {
 		List<Player> otherPlayers = getOtherPlayers(attacker, players);
 		otherPlayers.add(attacker);
 		players = otherPlayers;
