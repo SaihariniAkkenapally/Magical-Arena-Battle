@@ -1,6 +1,9 @@
-package com.swiggy.assignment;
+package com.swiggy.assignment.main;
 
 import java.util.List;
+
+import com.swiggy.assignment.game.Game;
+import com.swiggy.assignment.player.Player;
 
 public class Main {
 

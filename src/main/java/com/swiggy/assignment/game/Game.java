@@ -1,8 +1,10 @@
-package com.swiggy.assignment;
+package com.swiggy.assignment.game;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import com.swiggy.assignment.player.Player;
 
 public class Game {
 

@@ -5,4 +5,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>magical-arena</name>
   <description>A multiplayer game with dice.</description>
+  <dependencies>
+  <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.10.2</version>
+      <scope>test</scope>
+  </dependency>
+  </dependencies>
 </project>

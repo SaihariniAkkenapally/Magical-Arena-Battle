@@ -1,4 +1,4 @@
-package com.swiggy.assignment;
+package com.swiggy.assignment.player;
 
 import java.util.Objects;
 
@@ -53,7 +53,7 @@ public class Player {
 		return attack;
 	}
 
-	boolean isAlive() {
+	public boolean isAlive() {
 		return health > 0;
 	}
 
